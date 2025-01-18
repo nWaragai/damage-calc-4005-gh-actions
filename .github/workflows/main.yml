@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '20.11.0'
     - run: yarn install
-    - run: Run tests with JUnit as reporter
+    - name: Run tests with JUnit as reporter
     - run: npx jest --ci --reporters=default --reporters=jest-junit
       env:
         JEST_JUNIT_OUTPUT_DIR: "./junit/test-results.xml"
